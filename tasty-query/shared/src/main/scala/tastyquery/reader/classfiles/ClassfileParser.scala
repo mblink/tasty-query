@@ -140,6 +140,7 @@ private[reader] object ClassfileParser {
         val bytesArrArg = scalaSigAnnotation.values.head._2.asInstanceOf[AnnotationValue.Arr]
         val idxs = bytesArrArg.values.map(_.asInstanceOf[AnnotationValue.Const].valueIdx)
         pool.sigbytes(idxs)
+      case _: SimpleName => failNoAnnot()
     }
     Unpickler.loadInfo(sigBytes)
   }
