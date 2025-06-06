@@ -25,14 +25,15 @@ inThisBuild(Def.settings(
 
   scmInfo := Some(
     ScmInfo(
-      url("https://github.com/scalacenter/tasty-query"),
-      "scm:git@github.com:scalacenter/tasty-query.git",
-      Some("scm:git:git@github.com:scalacenter/tasty-query.git")
+      url("https://github.com/mblink/tasty-query"),
+      "scm:git@github.com:mblink/tasty-query.git",
+      Some("scm:git:git@github.com:mblink/tasty-query.git")
     )
   ),
-  organization := "ch.epfl.scala",
-  homepage := Some(url(s"https://github.com/scalacenter/tasty-query")),
+  organization := "bondlink",
+  homepage := Some(url(s"https://github.com/mblink/tasty-query")),
   licenses += (("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0"))),
+  publishTo := Some("BondLink S3".at("s3://bondlink-maven-repo")),
   developers := List(
     Developer("sjrd", "Sébastien Doeraene", "sjrdoeraene@gmail.com", url("https://github.com/sjrd/")),
     Developer("bishabosha", "Jamie Thompson", "bishbashboshjt@gmail.com", url("https://github.com/bishabosha")),
